@@ -147,7 +147,7 @@ function App() {
         <div className="section-body service-grid"><div><h2>Academic service</h2><p><strong>Peer review</strong><br />NeurIPS, AAAI, ICLR, MIDL, IEEE TNNLS, IEEE Access, and IEEE Big Data.</p></div><div><p><strong>Leadership</strong><br />Session Chair, IEEE HPCC 2025.</p><p><strong>Recognition</strong><br />SIGMETRICS 2025 Student Travel Grant.</p></div></div>
       </section>
 
-      <footer><div className="section-shell footer-inner"><div><p className="eyebrow">Let&apos;s connect</p><h2>Interested in intelligent systems and practical AI?</h2></div><a className="email-button" href="mailto:shiyuehou1@gmail.com"><Mail size={17} /> Email me</a></div><div className="section-shell footer-bottom"><span>© 2026 Shiyue Hou</span><a href="#top">Back to top ↑</a></div></footer>
+      <footer><div className="section-shell footer-bottom"><span>© 2026 Shiyue Hou</span><a href="#top">Back to top ↑</a></div></footer>
     </main>
   );
 }
