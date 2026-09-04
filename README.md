@@ -1,7 +1,7 @@
-# Shiyue (Jason) Hou — Personal Homepage
+# Shiyue Hou — Personal Homepage
 
-Academic portfolio for Shiyue (Jason) Hou, featuring research interests,
-selected publications, professional experience, education, and academic service.
+Academic portfolio for Shiyue Hou, featuring research interests, selected
+publications, professional experience, and academic service.
 
 Built with React, TypeScript, and Vite. Published with GitHub Pages.
 

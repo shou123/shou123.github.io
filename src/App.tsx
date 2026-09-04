@@ -1,133 +1,87 @@
-import {
-  ArrowDown,
-  ArrowUpRight,
-  Building2,
-  GraduationCap,
-  Mail,
-  MapPin,
-} from 'lucide-react';
+import { ArrowUpRight, GraduationCap, Mail, MapPin } from 'lucide-react';
 
 const researchAreas = [
-  {
-    number: '01',
-    title: 'Agentic Systems',
-    text: 'Agent-based architectures that reason about placement, admission, and feedback across complex infrastructure.',
-    tags: ['AI agents', 'Reinforcement learning', 'Adaptive systems'],
-  },
-  {
-    number: '02',
-    title: 'Federated Learning',
-    text: 'System-aware learning frameworks for heterogeneous clients, overlapping data, and energy-conscious optimization.',
-    tags: ['Client selection', 'Privacy', 'Sustainable AI'],
-  },
-  {
-    number: '03',
-    title: 'Intelligent Data Systems',
-    text: 'Learning-guided storage, caching, prefetching, and near-data processing for data-intensive AI workloads.',
-    tags: ['Distributed storage', 'Caching', 'Near-data processing'],
-  },
+  { title: 'Agentic Systems', text: 'Adaptive agents for data placement, admission control, and feedback-driven infrastructure optimization.' },
+  { title: 'Federated Learning', text: 'System-aware learning for heterogeneous clients, overlapping data, and energy-conscious training.' },
+  { title: 'Intelligent Data Systems', text: 'Learning-guided storage, caching, prefetching, and near-data processing for data-intensive workloads.' },
 ];
 
 const publications = [
   {
-    year: '2026',
-    type: 'Under Review',
+    year: '2026', type: 'Under Review',
     title: 'TierPilot: A Unified Learning Framework for Data Placement in Distributed Storage Systems',
     authors: 'Shiyue Hou, Pavana Prakash, Rolando Pablo Hong Enriquez, Alex Veprinsky, Dejan Milojicic, Ningfang Mi',
-    venue: 'Under review',
+    venue: 'Under review', image: './papers/tierpilot-overview.jpg',
+    summary: 'A learning-guided, cost-aware agent that separates data-importance prediction from tier placement decisions.',
   },
   {
-    year: '2026',
-    type: 'Under Review',
+    year: '2026', type: 'Under Review',
     title: 'FedEcoStream: Energy-Aware Federated Learning with Stream-Based Prefetching for Distributed Storage Optimization',
     authors: 'Shiyue Hou, Pavana Prakash, Rolando Pablo Hong Enriquez, Alex Veprinsky, Dejan Milojicic, Ningfang Mi',
-    venue: 'Under review',
+    venue: 'Under review', image: './papers/fedecostream-overview.jpg',
+    summary: 'An energy-aware federated framework that combines stream segmentation, graph learning, and adaptive client selection.',
   },
   {
-    year: '2025',
-    type: 'Publication',
+    year: '2025', type: 'Publication',
     title: 'Carbon Friendly Federated Learning Framework for Optimized Distributed Storage Systems',
     authors: 'Shiyue Hou, Pavana Prakash, Rolando Pablo Hong Enriquez, Ningfang Mi, Alex Veprinsky, Dejan Milojicic',
-    venue: 'ACM SIGMETRICS Performance Evaluation Review',
-    href: 'https://dl.acm.org/doi/10.1145/3764944.3764958',
+    venue: 'ACM SIGMETRICS Performance Evaluation Review', href: 'https://dl.acm.org/doi/10.1145/3764944.3764958',
+    image: './papers/carbon-fl-overview.jpg',
+    summary: 'A federated LSTM framework for predicting cache demand while reducing communication energy and carbon emissions.',
   },
   {
-    year: '2025',
-    type: 'Publication',
+    year: '2025', type: 'Publication',
     title: 'PECO: Probabilistic Evaluation-based Client Selection for Federated Learning with Overlapping Clients',
-    authors: 'Allen Yang, Shiyue Hou, Yiming Xie, Bo Sheng, Ningfang Mi',
-    venue: 'IEEE HPCC',
-    href: 'https://www.cs.umb.edu/~shengbo/paper/hpcc25.pdf',
+    authors: 'Allen Yang, Shiyue Hou, Yiming Xie, Bo Sheng, Ningfang Mi', venue: 'IEEE HPCC',
+    href: 'https://www.cs.umb.edu/~shengbo/paper/hpcc25.pdf', image: './papers/peco-overview.jpg',
+    summary: 'A probabilistic client-selection strategy that balances shared and unique contributions from overlapping clients.',
   },
   {
-    year: '2025',
-    type: 'Preprint',
-    title: 'Enabling Flexible Multi-LLM Integration for Scalable Knowledge Aggregation',
-    authors: 'Zhenglun Kong, Zheng Zhan, Shiyue Hou, et al.',
-    venue: 'arXiv:2505.23844',
-    href: 'https://arxiv.org/abs/2505.23844',
+    year: '2025', type: 'Preprint', title: 'Enabling Flexible Multi-LLM Integration for Scalable Knowledge Aggregation',
+    authors: 'Zhenglun Kong, Zheng Zhan, Shiyue Hou, et al.', venue: 'arXiv:2505.23844',
+    href: 'https://arxiv.org/abs/2505.23844', image: './papers/multi-llm-overview.png',
+    summary: 'Adaptive source-model selection and weighted fusion for scalable knowledge aggregation across multiple LLMs.',
   },
   {
-    year: '2024',
-    type: 'Publication',
-    title: 'FedLDCS: Adaptive Divergence-Based Client Selection for Federated Learning',
-    authors: 'Shiyue Hou, Zhenglun Kong',
-    venue: 'FedKDD Workshop',
-    href: 'https://openreview.net/forum?id=pNZ0fQ5tDV',
+    year: '2024', type: 'Publication', title: 'FedLDCS: Adaptive Divergence-Based Client Selection for Federated Learning',
+    authors: 'Shiyue Hou, Zhenglun Kong', venue: 'FedKDD Workshop', href: 'https://openreview.net/forum?id=pNZ0fQ5tDV',
+    image: './papers/fedldcs-overview.jpg',
+    summary: 'A divergence-based policy that prioritizes clients whose local models can contribute most to global training.',
   },
   {
-    year: '2024',
-    type: 'Publication',
+    year: '2024', type: 'Publication',
     title: 'Performance Analysis of Data Processing in Distributed File Systems with Near Data Processing',
-    authors: 'Shiyue Hou, Nathan R. Tallent, Li Wang, Ningfang Mi',
-    venue: 'IEEE ISNCC',
-    href: 'https://par.nsf.gov/biblio/10589508',
+    authors: 'Shiyue Hou, Nathan R. Tallent, Li Wang, Ningfang Mi', venue: 'IEEE ISNCC',
+    href: 'https://doi.org/10.1109/ISNCC62547.2024.10758994', image: './papers/near-data-overview.jpg',
+    summary: 'An evaluation of traditional, optimized, and near-data processing layouts for distributed file systems.',
   },
 ];
 
 const experience = [
-  {
-    period: '2024 — Present', company: 'Hewlett Packard Labs', role: 'Research Associate Intern', location: 'Milpitas, California',
-    detail: 'Agent-based data placement, graph learning for storage prefetching, and carbon-aware federated learning for distributed systems.',
-  },
-  {
-    period: '2023 — 2025', company: 'Pacific Northwest National Laboratory', role: 'Visiting Researcher', location: 'Richland, Washington',
-    detail: 'Near-data processing on Ceph and data-movement-aware ML pipelines with Apache Arrow, Parquet, and DuckDB.',
-  },
-  {
-    period: 'Summer 2022', company: 'NetApp', role: 'System Performance Intern', location: 'San Jose, California',
-    detail: 'Scalable performance testing, telemetry, and ML-based anomaly detection for ONTAP replication systems.',
-  },
-  {
-    period: '2020 — 2021', company: 'Bilibili Group', role: 'Senior Software Engineer', location: 'Shanghai, China',
-    detail: 'Cross-platform applications and data integration systems for Windows, Surface, Xbox, Android, and iOS.',
-  },
-  {
-    period: '2018 — 2020', company: 'Intel Corporation', role: 'Software Engineer', location: 'Dalian, China',
-    detail: 'Data analytics, visualization, and multi-threaded pipelines for 3D NAND manufacturing systems.',
-  },
+  { period: '2024 - Present', company: 'Hewlett Packard Labs', role: 'Research Associate Intern', location: 'Milpitas, California', logo: './logos/hpe-labs.png', href: 'https://www.hpe.com/us/en/hewlett-packard-labs.html', detail: 'Agentic data placement, graph learning for storage prefetching, and carbon-aware federated learning.' },
+  { period: '2023 - 2025', company: 'Pacific Northwest National Laboratory', role: 'Visiting Researcher', location: 'Richland, Washington', logo: './logos/pnnl.jpg', href: 'https://www.pnnl.gov/', detail: 'Near-data processing on Ceph and data-movement-aware pipelines with Arrow, Parquet, and DuckDB.' },
+  { period: 'Summer 2022', company: 'NetApp', role: 'System Performance Intern', location: 'San Jose, California', logo: './logos/netapp.png', href: 'https://www.netapp.com/', detail: 'Performance testing, telemetry, and ML-based anomaly detection for ONTAP replication systems.' },
+  { period: '2020 - 2021', company: 'Bilibili Group', role: 'Senior Software Engineer', location: 'Shanghai, China', logo: './logos/bilibili.png', href: 'https://www.bilibili.com/', detail: 'Cross-platform applications and data integration for Windows, Surface, Xbox, Android, and iOS.' },
+  { period: '2018 - 2020', company: 'Intel Corporation', role: 'Software Engineer', location: 'Dalian, China', logo: './logos/intel.png', href: 'https://www.intel.com/', detail: 'Data analytics, visualization, and multithreaded pipelines for 3D NAND manufacturing systems.' },
 ];
 
 function App() {
   return (
-    <main>
+    <main id="top">
       <nav className="nav-shell" aria-label="Primary navigation">
         <a className="wordmark" href="#top" aria-label="Home">SH</a>
-        <div className="nav-links">
-          <a href="#about">About</a><a href="#research">Research</a>
-          <a href="#publications">Publications</a><a href="#experience">Experience</a>
-        </div>
+        <div className="nav-links"><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#experience">Experience</a></div>
       </nav>
 
-      <section className="hero section-shell" id="top">
+      <section className="hero section-shell">
         <div className="hero-copy">
           <p className="eyebrow">Computer Engineering · AI &amp; Data Systems</p>
-          <h1>Shiyue <span>(Jason)</span> Hou</h1>
+          <h1>Shiyue Hou</h1>
           <p className="hero-role">Ph.D. Candidate at Northeastern University</p>
-          <p className="hero-lede">I build intelligent, efficient systems at the intersection of AI agents, federated learning, and distributed data infrastructure.</p>
+          <p className="hero-lede">I build intelligent and efficient systems at the intersection of AI agents, federated learning, and distributed data infrastructure.</p>
           <div className="social-links" aria-label="Profile links">
-            <a href="mailto:shiyuehou1@gmail.com" aria-label="Email"><Mail size={19} /></a>
-            <a href="https://scholar.google.com/citations?user=dxJUfNAAAAAJ&hl=en" aria-label="Google Scholar"><GraduationCap size={20} /></a>
+            <a href="mailto:shiyuehou1@gmail.com" aria-label="Email"><Mail size={18} /></a>
+            <a href="https://scholar.google.com/citations?user=dxJUfNAAAAAJ&hl=en" aria-label="Google Scholar"><GraduationCap size={19} /></a>
             <a className="social-text" href="https://github.com/shou123" aria-label="GitHub">GH</a>
             <a className="social-text" href="https://www.linkedin.com/in/shiyuehou/" aria-label="LinkedIn">in</a>
             <a className="cv-link" href="./Shiyue_Hou_Resume.pdf">CV</a>
@@ -137,90 +91,63 @@ function App() {
           <img src="./shiyue-hou-yosemite.jpg" alt="Shiyue Hou at Yosemite National Park" />
           <figcaption>Yosemite National Park</figcaption>
         </figure>
-        <a className="scroll-cue" href="#about" aria-label="Scroll to about section"><ArrowDown size={18} /></a>
       </section>
 
       <section className="about section-shell split-section" id="about">
-        <p className="section-kicker">01 / About</p>
-        <div className="section-body about-body">
-          <h2>Designing learning systems that work in the real world.</h2>
-          <div className="about-grid">
-            <p>I am a Ph.D. candidate in Computer Engineering at Northeastern University. My work connects machine learning with the realities of large-scale systems: limited data movement, heterogeneous infrastructure, energy constraints, and workloads that change over time.</p>
-            <p>I have developed end-to-end systems across research labs and industry, from intelligent storage and near-data processing to adaptive caching and federated learning. I care about ideas that are rigorous, deployable, and useful.</p>
-          </div>
-          <div className="status-note"><span /> Currently based in the Boston area</div>
+        <p className="section-kicker">About</p>
+        <div className="section-body about-copy">
+          <p>I am a Ph.D. candidate in the Department of Electrical and Computer Engineering at <a href="https://www.northeastern.edu/">Northeastern University</a>, advised by Prof. <a href="https://www1.ece.neu.edu/~ningfang/">Ningfang Mi</a>. My research lies at the intersection of machine learning and computer systems, with a focus on agentic systems, federated learning, and intelligent data infrastructure.</p>
+          <p>I am currently a Research Associate Intern at <a href="https://www.hpe.com/us/en/hewlett-packard-labs.html">Hewlett Packard Labs</a>. Previously, I was a Visiting Researcher at <a href="https://www.pnnl.gov/">Pacific Northwest National Laboratory</a> and a System Performance Intern at <a href="https://www.netapp.com/">NetApp</a>. Before beginning my doctoral research, I worked as a Senior Software Engineer at <a href="https://www.bilibili.com/">Bilibili</a> and as a Software Engineer at <a href="https://www.intel.com/">Intel</a>.</p>
+          <div className="status-note"><span /> Based in the Boston area</div>
         </div>
       </section>
 
       <section className="research section-shell split-section" id="research">
-        <p className="section-kicker">02 / Research</p>
-        <div className="section-body">
-          <div className="section-heading-row"><h2>Research interests</h2><p>Learning systems that adapt to infrastructure, not just datasets.</p></div>
-          <div className="research-grid">
-            {researchAreas.map((area) => (
-              <article className="research-card" key={area.number}>
-                <span className="card-number">{area.number}</span><h3>{area.title}</h3><p>{area.text}</p>
-                <ul>{area.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
-              </article>
-            ))}
-          </div>
-        </div>
+        <p className="section-kicker">Research</p>
+        <div className="section-body"><h2>Research interests</h2><div className="research-grid">
+          {researchAreas.map((area, index) => <article className="research-card" key={area.title}><span>0{index + 1}</span><div><h3>{area.title}</h3><p>{area.text}</p></div></article>)}
+        </div></div>
       </section>
 
       <section className="publications section-shell split-section" id="publications">
-        <p className="section-kicker">03 / Publications</p>
+        <p className="section-kicker">Publications</p>
         <div className="section-body">
-          <div className="section-heading-row">
-            <h2>Selected work</h2>
-            <a className="text-link" href="https://scholar.google.com/citations?user=dxJUfNAAAAAJ&hl=en">Full list on Scholar <ArrowUpRight size={16} /></a>
-          </div>
-          <div className="publication-list">
-            {publications.map((paper) => (
-              <article className="paper" key={paper.title}>
-                <div className="paper-meta"><span>{paper.year}</span><span>{paper.type}</span></div>
-                <div><h3>{paper.href ? <a href={paper.href}>{paper.title}</a> : paper.title}</h3><p className="authors">{paper.authors}</p><p className="venue">{paper.venue}</p></div>
-                {paper.href && <a className="paper-arrow" href={paper.href} aria-label={`Open ${paper.title}`}><ArrowUpRight size={20} /></a>}
-              </article>
-            ))}
-          </div>
+          <div className="section-heading-row"><h2>Selected work</h2><a className="text-link" href="https://scholar.google.com/citations?user=dxJUfNAAAAAJ&hl=en">Google Scholar <ArrowUpRight size={15} /></a></div>
+          <div className="publication-list">{publications.map((paper) => <article className="paper" key={paper.title}>
+            <a className="paper-image" href={paper.href ?? paper.image} aria-label={`Open ${paper.title}`}><img src={paper.image} alt={`Overview diagram for ${paper.title}`} loading="lazy" /></a>
+            <div className="paper-copy"><p className="paper-meta"><span>{paper.year}</span><span>{paper.type}</span></p><h3>{paper.href ? <a href={paper.href}>{paper.title}</a> : paper.title}</h3><p className="authors">{paper.authors}</p><p className="venue">{paper.venue}</p><p className="paper-summary">{paper.summary}</p></div>
+          </article>)}</div>
         </div>
       </section>
 
       <section className="experience section-shell split-section" id="experience">
-        <p className="section-kicker">04 / Experience</p>
-        <div className="section-body">
-          <div className="section-heading-row"><h2>Experience</h2></div>
-          <div className="timeline">
-            {experience.map((item) => (
-              <article className="timeline-row" key={`${item.company}-${item.period}`}>
-                <p className="period">{item.period}</p><div className="timeline-mark"><span /></div>
-                <div className="timeline-copy"><p className="company"><Building2 size={16} /> {item.company}</p><h3>{item.role}</h3><p className="location"><MapPin size={14} /> {item.location}</p><p>{item.detail}</p></div>
-              </article>
-            ))}
+        <p className="section-kicker">Experience</p>
+        <div className="section-body"><h2>Research &amp; industry</h2><div className="experience-list">{experience.map((item) => <article className="experience-row" key={`${item.company}-${item.period}`}>
+          <a className="logo-box" href={item.href} aria-label={item.company}><img src={item.logo} alt={`${item.company} logo`} loading="lazy" /></a>
+          <div className="experience-copy"><div className="experience-title"><div><h3>{item.company}</h3><p>{item.role}</p></div><p className="period">{item.period}</p></div><p className="location"><MapPin size={13} /> {item.location}</p><p className="experience-detail">{item.detail}</p></div>
+        </article>)}</div></div>
+      </section>
+
+      <section className="education section-shell split-section" id="education">
+        <p className="section-kicker">Education</p>
+        <div className="section-body education-row">
+          <a className="logo-box" href="https://www.northeastern.edu/" aria-label="Northeastern University">
+            <img src="./logos/northeastern.png" alt="Northeastern University logo" loading="lazy" />
+          </a>
+          <div>
+            <p className="period">2021 - Present</p>
+            <h2>Ph.D. in Computer Engineering</h2>
+            <p>Northeastern University · Advisor: <a href="https://www1.ece.neu.edu/~ningfang/">Prof. Ningfang Mi</a></p>
           </div>
         </div>
       </section>
 
-      <section className="education section-shell split-section" id="education">
-        <p className="section-kicker">05 / Education &amp; Service</p>
-        <div className="section-body education-grid">
-          <div><h2>Education</h2><div className="compact-list">
-            <article><span>2021 — Present</span><h3>Ph.D. in Computer Engineering</h3><p>Northeastern University · Boston, MA</p></article>
-            <article><span>2015 — 2018</span><h3>M.E. in Electrical Engineering</h3><p>Lamar University · Beaumont, TX</p></article>
-            <article><span>2011 — 2015</span><h3>B.E. in Electrical Engineering</h3><p>Inner Mongolia University · China</p></article>
-          </div></div>
-          <div><h2>Academic service</h2><div className="service-box">
-            <p><strong>Peer review</strong><br />NeurIPS, AAAI, ICLR, MIDL, IEEE TNNLS, IEEE Access, IEEE Big Data</p>
-            <p><strong>Leadership</strong><br />Session Chair, IEEE HPCC 2025</p>
-            <p><strong>Recognition</strong><br />SIGMETRICS 2025 Student Travel Grant</p>
-          </div></div>
-        </div>
+      <section className="service section-shell split-section" id="service">
+        <p className="section-kicker">Service</p>
+        <div className="section-body service-grid"><div><h2>Academic service</h2><p><strong>Peer review</strong><br />NeurIPS, AAAI, ICLR, MIDL, IEEE TNNLS, IEEE Access, and IEEE Big Data.</p></div><div><p><strong>Leadership</strong><br />Session Chair, IEEE HPCC 2025.</p><p><strong>Recognition</strong><br />SIGMETRICS 2025 Student Travel Grant.</p></div></div>
       </section>
 
-      <footer>
-        <div className="section-shell footer-inner"><div><p className="eyebrow">Let’s connect</p><h2>Interested in intelligent systems and practical AI?</h2></div><a className="email-button" href="mailto:shiyuehou1@gmail.com"><Mail size={18} /> Email me</a></div>
-        <div className="section-shell footer-bottom"><span>© 2026 Shiyue (Jason) Hou</span><a href="#top">Back to top ↑</a></div>
-      </footer>
+      <footer><div className="section-shell footer-inner"><div><p className="eyebrow">Let&apos;s connect</p><h2>Interested in intelligent systems and practical AI?</h2></div><a className="email-button" href="mailto:shiyuehou1@gmail.com"><Mail size={17} /> Email me</a></div><div className="section-shell footer-bottom"><span>© 2026 Shiyue Hou</span><a href="#top">Back to top ↑</a></div></footer>
     </main>
   );
 }
