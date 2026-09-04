@@ -80,10 +80,12 @@ h1 { margin: 16px 0 8px; font-size: clamp(52px, 7vw, 80px); line-height: 1; lett
 .location { display: flex; align-items: center; gap: 5px; margin: 8px 0 0; color: var(--muted); font-size: 11px; }
 .experience-detail { max-width: 680px; margin: 9px 0 0; color: #43534e; font-size: 13px; line-height: 1.55; }
 
-.education-row { display: grid; grid-template-columns: 150px 1fr; gap: 26px; align-items: center; }
-.education-row h2 { margin-top: 8px; font-size: clamp(29px, 3vw, 40px); }
-.education-row > div > p:last-child { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
-.education-row > div > p:last-child a { color: var(--accent); }
+.education-list { margin-top: 28px; border-top: 1px solid var(--line); }
+.education-row { display: grid; grid-template-columns: 150px 1fr; gap: 26px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.education-copy h3 { margin: 7px 0 0; font-family: 'Libre Caslon Display', Georgia, serif; font-size: 24px; font-weight: 400; line-height: 1.25; }
+.education-school { margin: 5px 0 0; color: var(--accent); font-size: 13px; font-weight: 700; }
+.education-note { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+.education-note a { color: var(--accent); }
 
 .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; }
 .service-grid > div:last-child { padding-top: 5px; }

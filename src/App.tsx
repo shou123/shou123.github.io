@@ -58,11 +58,17 @@ const publications = [
 ];
 
 const experience = [
-  { period: '2024 - Present', company: 'Hewlett Packard Labs', role: 'Research Associate Intern', location: 'Milpitas, California', logo: './logos/hpe-labs.png', href: 'https://www.hpe.com/us/en/hewlett-packard-labs.html', detail: 'Agentic data placement, graph learning for storage prefetching, and carbon-aware federated learning.' },
+  { period: '2024 - Present', company: 'HPE Labs', role: 'Research Associate Intern', location: 'Milpitas, California', logo: './logos/hpe-labs-v2.png', href: 'https://www.hpe.com/us/en/hewlett-packard-labs.html', detail: 'Agentic data placement, graph learning for storage prefetching, and carbon-aware federated learning.' },
   { period: '2023 - 2025', company: 'Pacific Northwest National Laboratory', role: 'Visiting Researcher', location: 'Richland, Washington', logo: './logos/pnnl.jpg', href: 'https://www.pnnl.gov/', detail: 'Near-data processing on Ceph and data-movement-aware pipelines with Arrow, Parquet, and DuckDB.' },
-  { period: 'Summer 2022', company: 'NetApp', role: 'System Performance Intern', location: 'San Jose, California', logo: './logos/netapp.png', href: 'https://www.netapp.com/', detail: 'Performance testing, telemetry, and ML-based anomaly detection for ONTAP replication systems.' },
-  { period: '2020 - 2021', company: 'Bilibili Group', role: 'Senior Software Engineer', location: 'Shanghai, China', logo: './logos/bilibili.png', href: 'https://www.bilibili.com/', detail: 'Cross-platform applications and data integration for Windows, Surface, Xbox, Android, and iOS.' },
-  { period: '2018 - 2020', company: 'Intel Corporation', role: 'Software Engineer', location: 'Dalian, China', logo: './logos/intel.png', href: 'https://www.intel.com/', detail: 'Data analytics, visualization, and multithreaded pipelines for 3D NAND manufacturing systems.' },
+  { period: 'Summer 2022', company: 'NetApp', role: 'System Performance Intern', location: 'San Jose, California', logo: './logos/netapp-v2.png', href: 'https://www.netapp.com/', detail: 'Performance testing, telemetry, and ML-based anomaly detection for ONTAP replication systems.' },
+  { period: '2020 - 2021', company: 'Bilibili Group', role: 'Senior Software Engineer', location: 'Shanghai, China', logo: './logos/bilibili-v2.jpg', href: 'https://www.bilibili.com/', detail: 'Cross-platform applications and data integration for Windows, Surface, Xbox, Android, and iOS.' },
+  { period: '2018 - 2020', company: 'Intel Corporation', role: 'Software Engineer', location: 'Dalian, China', logo: './logos/intel-v2.png', href: 'https://www.intel.com/', detail: 'Data analytics, visualization, and multithreaded pipelines for 3D NAND manufacturing systems.' },
+];
+
+const education = [
+  { period: '2021 - Present', degree: 'Ph.D. in Computer Engineering', school: 'Northeastern University', location: 'Boston, Massachusetts', logo: './logos/northeastern-v2.png', href: 'https://www.northeastern.edu/', note: <>Advisor: <a href="https://www1.ece.neu.edu/~ningfang/">Prof. Ningfang Mi</a></> },
+  { period: '2015 - 2018', degree: 'Master of Engineering in Electrical Engineering', school: 'Lamar University', location: 'Beaumont, Texas', logo: './logos/lamar.png', href: 'https://www.lamar.edu/' },
+  { period: '2011 - 2015', degree: 'Bachelor of Engineering in Electrical Engineering', school: 'Inner Mongolia University', location: 'Inner Mongolia, China', logo: './logos/inner-mongolia.png', href: 'https://www.imu.edu.cn/' },
 ];
 
 function App() {
@@ -97,7 +103,7 @@ function App() {
         <p className="section-kicker">About</p>
         <div className="section-body about-copy">
           <p>I am a Ph.D. candidate in the Department of Electrical and Computer Engineering at <a href="https://www.northeastern.edu/">Northeastern University</a>, advised by Prof. <a href="https://www1.ece.neu.edu/~ningfang/">Ningfang Mi</a>. My research lies at the intersection of machine learning and computer systems, with a focus on agentic systems, federated learning, and intelligent data infrastructure.</p>
-          <p>I am currently a Research Associate Intern at <a href="https://www.hpe.com/us/en/hewlett-packard-labs.html">Hewlett Packard Labs</a>. Previously, I was a Visiting Researcher at <a href="https://www.pnnl.gov/">Pacific Northwest National Laboratory</a> and a System Performance Intern at <a href="https://www.netapp.com/">NetApp</a>. Before beginning my doctoral research, I worked as a Senior Software Engineer at <a href="https://www.bilibili.com/">Bilibili</a> and as a Software Engineer at <a href="https://www.intel.com/">Intel</a>.</p>
+          <p>I am currently a Research Associate Intern at <a href="https://www.hpe.com/us/en/hewlett-packard-labs.html">HPE Labs</a>. Previously, I was a Visiting Researcher at <a href="https://www.pnnl.gov/">Pacific Northwest National Laboratory</a> and a System Performance Intern at <a href="https://www.netapp.com/">NetApp</a>. Before beginning my doctoral research, I worked as a Senior Software Engineer at <a href="https://www.bilibili.com/">Bilibili</a> and as a Software Engineer at <a href="https://www.intel.com/">Intel</a>.</p>
           <div className="status-note"><span /> Based in the Boston area</div>
         </div>
       </section>
@@ -130,16 +136,10 @@ function App() {
 
       <section className="education section-shell split-section" id="education">
         <p className="section-kicker">Education</p>
-        <div className="section-body education-row">
-          <a className="logo-box" href="https://www.northeastern.edu/" aria-label="Northeastern University">
-            <img src="./logos/northeastern.png" alt="Northeastern University logo" loading="lazy" />
-          </a>
-          <div>
-            <p className="period">2021 - Present</p>
-            <h2>Ph.D. in Computer Engineering</h2>
-            <p>Northeastern University · Advisor: <a href="https://www1.ece.neu.edu/~ningfang/">Prof. Ningfang Mi</a></p>
-          </div>
-        </div>
+        <div className="section-body"><h2>Academic background</h2><div className="education-list">{education.map((item) => <article className="education-row" key={item.degree}>
+          <a className="logo-box" href={item.href} aria-label={item.school}><img src={item.logo} alt={`${item.school} logo`} loading="lazy" /></a>
+          <div className="education-copy"><p className="period">{item.period}</p><h3>{item.degree}</h3><p className="education-school">{item.school}</p><p className="location"><MapPin size={13} /> {item.location}</p>{item.note && <p className="education-note">{item.note}</p>}</div>
+        </article>)}</div></div>
       </section>
 
       <section className="service section-shell split-section" id="service">
