@@ -88,7 +88,7 @@ function App() {
           </div>
         </div>
         <figure className="portrait-wrap">
-          <img src="./shiyue-hou-yosemite.jpg" alt="Shiyue Hou at Yosemite National Park" />
+          <img src="./shiyue-hou-yosemite-v2.jpg" alt="Shiyue Hou at Yosemite National Park" />
           <figcaption>Yosemite National Park</figcaption>
         </figure>
       </section>
