@@ -73,7 +73,7 @@ h1 { margin: 16px 0 8px; font-size: clamp(52px, 7vw, 80px); line-height: 1; lett
 .experience-row { display: grid; grid-template-columns: 150px 1fr; gap: 26px; padding: 24px 0; border-bottom: 1px solid var(--line); }
 .logo-box { display: grid; place-items: center; height: 92px; padding: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 9px; background: white; }
 .logo-box img { display: block; width: calc(100% - 16px); height: calc(100% - 16px); object-fit: contain; object-position: 50% 50%; }
-.logo-box img[alt="HPE Labs logo"] { width: calc(100% - 24px); height: calc(100% - 24px); transform: translateY(-7px); }
+.logo-box img[alt="HPE Labs logo"] { width: calc(100% - 24px); height: calc(100% - 24px); transform: translateY(-10px); }
 .logo-box img[alt="Bilibili Group logo"] { transform: translateY(-4px); }
 .logo-box img[alt="Inner Mongolia University logo"] { transform: scale(1.22); }
 .logo-box img[alt="Intel Corporation logo"] { width: calc(100% - 30px); height: calc(100% - 30px); }
