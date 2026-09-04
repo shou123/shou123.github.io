@@ -72,7 +72,11 @@ h1 { margin: 16px 0 8px; font-size: clamp(52px, 7vw, 80px); line-height: 1; lett
 .experience-list { margin-top: 28px; border-top: 1px solid var(--line); }
 .experience-row { display: grid; grid-template-columns: 150px 1fr; gap: 26px; padding: 24px 0; border-bottom: 1px solid var(--line); }
 .logo-box { display: grid; place-items: center; height: 92px; padding: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 9px; background: white; }
-.logo-box img { display: block; width: calc(100% - 30px); height: calc(100% - 30px); object-fit: contain; object-position: 50% 50%; }
+.logo-box img { display: block; width: calc(100% - 16px); height: calc(100% - 16px); object-fit: contain; object-position: 50% 50%; }
+.logo-box img[alt="HPE Labs logo"] { width: calc(100% - 24px); height: calc(100% - 24px); transform: translateY(-4px); }
+.logo-box img[alt="Bilibili Group logo"] { transform: translateY(-4px); }
+.logo-box img[alt="Inner Mongolia University logo"] { transform: scale(1.22); }
+.logo-box img[alt="Intel Corporation logo"] { width: calc(100% - 30px); height: calc(100% - 30px); }
 .experience-title { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
 .experience-title h3 { margin: 0; font-family: 'Libre Caslon Display', Georgia, serif; font-size: 23px; font-weight: 400; }
 .experience-title > div > p { margin: 3px 0 0; color: var(--accent); font-size: 12px; font-weight: 700; }
@@ -123,7 +127,9 @@ footer { padding: 62px 0 24px; background: var(--ink); color: white; }
   .experience-row { grid-template-columns: 105px 1fr; gap: 16px; }
   .education-row { grid-template-columns: 105px 1fr; gap: 16px; }
   .logo-box { height: 78px; }
-  .logo-box img { width: calc(100% - 22px); height: calc(100% - 22px); }
+  .logo-box img { width: calc(100% - 12px); height: calc(100% - 12px); }
+  .logo-box img[alt="HPE Labs logo"] { width: calc(100% - 18px); height: calc(100% - 18px); }
+  .logo-box img[alt="Intel Corporation logo"] { width: calc(100% - 22px); height: calc(100% - 22px); }
   .experience-title { flex-direction: column; gap: 4px; }
   .period { order: -1; }
   .service-grid { grid-template-columns: 1fr; gap: 10px; }
