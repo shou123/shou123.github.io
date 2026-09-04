@@ -33,7 +33,7 @@ const publications = [
     year: '2025', type: 'Publication',
     title: 'PECO: Probabilistic Evaluation-based Client Selection for Federated Learning with Overlapping Clients',
     authors: 'Allen Yang, Shiyue Hou, Yiming Xie, Bo Sheng, Ningfang Mi', venue: 'IEEE HPCC',
-    href: 'https://www.cs.umb.edu/~shengbo/paper/hpcc25.pdf', image: './papers/peco-overview.jpg',
+    href: 'https://www.cs.umb.edu/~shengbo/paper/hpcc25.pdf', image: './papers/peco-overview-clean.png',
     summary: 'A probabilistic client-selection strategy that balances shared and unique contributions from overlapping clients.',
   },
   {
