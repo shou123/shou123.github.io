@@ -68,7 +68,7 @@ const experience = [
 const education = [
   { period: '2021 - Present', degree: 'Ph.D. in Computer Engineering', school: 'Northeastern University', location: 'Boston, Massachusetts', logo: './logos/northeastern-v2.png', href: 'https://www.northeastern.edu/', note: <>Advisor: <a href="https://www1.ece.neu.edu/~ningfang/">Prof. Ningfang Mi</a></> },
   { period: '2015 - 2018', degree: 'Master of Engineering in Electrical Engineering', school: 'Lamar University', location: 'Beaumont, Texas', logo: './logos/lamar.png', href: 'https://www.lamar.edu/' },
-  { period: '2011 - 2015', degree: 'Bachelor of Engineering in Electrical Engineering', school: 'Inner Mongolia University', location: 'Inner Mongolia, China', logo: './logos/inner-mongolia.png', href: 'https://www.imu.edu.cn/' },
+  { period: '2011 - 2015', degree: 'Bachelor of Engineering in Electrical Engineering', school: 'Inner Mongolia University', location: 'Inner Mongolia, China', logo: './logos/inner-mongolia-lockup.png', href: 'https://www.imu.edu.cn/' },
 ];
 
 function App() {

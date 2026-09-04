@@ -49,7 +49,8 @@ h1 { margin: 16px 0 8px; font-size: clamp(52px, 7vw, 80px); line-height: 1; lett
 .status-note span { width: 7px; height: 7px; border-radius: 50%; background: #43a174; box-shadow: 0 0 0 4px rgba(67, 161, 116, .12); }
 
 .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; }
-.research-card { min-height: 210px; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+.research-card { min-height: 210px; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+.research-card:hover { transform: translateY(-6px); border-color: rgba(31, 104, 85, .32); box-shadow: 0 14px 30px rgba(31, 54, 46, .1); }
 .research-card > span { color: var(--accent); font-size: 10px; font-weight: 700; }
 .research-card h3 { margin: 32px 0 8px; font-family: 'Libre Caslon Display', Georgia, serif; font-size: 23px; font-weight: 400; }
 .research-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
@@ -58,9 +59,9 @@ h1 { margin: 16px 0 8px; font-size: clamp(52px, 7vw, 80px); line-height: 1; lett
 .text-link { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); font-size: 12px; font-weight: 700; }
 .publication-list { border-top: 1px solid var(--line); }
 .paper { display: grid; grid-template-columns: 230px 1fr; gap: 28px; padding: 24px 0; border-bottom: 1px solid var(--line); }
-.paper-image { align-self: start; display: grid; place-items: center; height: 150px; padding: 10px; overflow: hidden; border: 1px solid var(--line); border-radius: 9px; background: white; }
-.paper-image img { width: 100%; height: 100%; object-fit: contain; transition: transform .25s ease; }
-.paper-image:hover img { transform: scale(1.025); }
+.paper-image { align-self: start; display: grid; place-items: center; height: 150px; padding: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 9px; background: white; }
+.paper-image img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.08); transition: transform .25s ease; }
+.paper-image:hover img { transform: scale(1.13); }
 .paper-meta { display: flex; gap: 12px; margin: 0 0 7px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .paper-meta span:first-child { color: var(--accent); }
 .paper h3 { max-width: 700px; margin: 0; font-family: 'Libre Caslon Display', Georgia, serif; font-size: 21px; line-height: 1.3; font-weight: 400; }
@@ -78,7 +79,7 @@ h1 { margin: 16px 0 8px; font-size: clamp(52px, 7vw, 80px); line-height: 1; lett
 .logo-box img[alt="Bilibili Group logo"] { transform: translateY(-4px); }
 .logo-box img[alt="Northeastern University logo"] { transform: translateY(-20px) scale(1.25); }
 .logo-box img[alt="Lamar University logo"] { transform: scale(1.06); }
-.logo-box img[alt="Inner Mongolia University logo"] { transform: scale(1.22); }
+.logo-box img[alt="Inner Mongolia University logo"] { width: calc(100% - 8px); height: calc(100% - 8px); }
 .logo-box img[alt="Intel Corporation logo"] { width: calc(100% - 30px); height: calc(100% - 30px); }
 .experience-title { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
 .experience-title h3 { margin: 0; font-family: 'Libre Caslon Display', Georgia, serif; font-size: 23px; font-weight: 400; }
