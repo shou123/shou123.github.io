@@ -71,6 +71,21 @@ const education = [
   { period: '2011 - 2015', degree: 'Bachelor of Engineering in Electrical Engineering', school: 'Inner Mongolia University', location: 'Inner Mongolia, China', logo: './logos/inner-mongolia-lockup.png', href: 'https://www.imu.edu.cn/' },
 ];
 
+const patents = [
+  {
+    year: '2026',
+    status: 'Filing',
+    title: 'Adaptive Delta LBA Graph Rewriting for Storage Prefetching',
+    inventors: 'Shiyue Hou, Pavana Prakash, Rolando Pablo Hong Enriquez, Alex Veprinsky, Dejan Milojicic',
+  },
+  {
+    year: '2026',
+    status: 'Filing',
+    title: 'Divergence-aware Client Selection in Hierarchical Federated Learning for Distributed Storage Systems',
+    inventors: 'Shiyue Hou, Pavana Prakash, Rolando Pablo Hong Enriquez, Alex Veprinsky, Dejan Milojicic',
+  },
+];
+
 function App() {
   return (
     <main id="top">
@@ -142,9 +157,18 @@ function App() {
         </article>)}</div></div>
       </section>
 
+      <section className="patents section-shell split-section" id="patents">
+        <p className="section-kicker">Patents</p>
+        <div className="section-body"><h2>Patent filings</h2><div className="patent-list">{patents.map((patent) => <article className="patent-row" key={patent.title}>
+          <p className="patent-meta"><span>{patent.year}</span><span>{patent.status}</span></p>
+          <h3>{patent.title}</h3>
+          <p className="patent-inventors">{patent.inventors}</p>
+        </article>)}</div></div>
+      </section>
+
       <section className="service section-shell split-section" id="service">
         <p className="section-kicker">Service</p>
-        <div className="section-body service-grid"><div><h2>Academic service</h2><p><strong>Peer review</strong><br />NeurIPS, AAAI, ICLR, MIDL, IEEE TNNLS, IEEE Access, and IEEE Big Data.</p></div><div><p><strong>Leadership</strong><br />Session Chair, IEEE HPCC 2025.</p><p><strong>Recognition</strong><br />SIGMETRICS 2025 Student Travel Grant.</p></div></div>
+        <div className="section-body service-grid"><div><h2>Academic service</h2><p><strong>Peer review - Conferences</strong><br />NeurIPS 2024 &amp; 2026; AAAI 2026 &amp; 2027; ICLR 2026; MIDL 2025.</p><p><strong>Peer review - Journals</strong><br />IEEE TNNLS 2024; IEEE Access 2023 &amp; 2024; IEEE Big Data 2023.</p></div><div><p><strong>Leadership</strong><br />Session Chair, IEEE HPCC 2025.</p><p><strong>Recognition</strong><br />SIGMETRICS 2025 Student Travel Grant.</p></div></div>
       </section>
 
       <footer><div className="section-shell footer-bottom"><span>© 2026 Shiyue Hou</span><a href="#top">Back to top ↑</a></div></footer>
