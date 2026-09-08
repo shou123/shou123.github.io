@@ -1,4 +1,5 @@
 import { ArrowUpRight, GraduationCap, Mail, MapPin } from 'lucide-react';
+import VisitorMap from './VisitorMap';
 
 const researchAreas = [
   { title: 'Agentic Systems', text: 'Adaptive agents for data placement, admission control, and feedback-driven infrastructure optimization.' },
@@ -170,6 +171,8 @@ function App() {
         <p className="section-kicker">Service</p>
         <div className="section-body service-grid"><div><h2>Academic service</h2><p><strong>Peer review - Conferences</strong><br />NeurIPS 2024 &amp; 2026; AAAI 2026 &amp; 2027; ICLR 2026; MIDL 2025.</p><p><strong>Peer review - Journals</strong><br />IEEE TNNLS 2024; IEEE Access 2023 &amp; 2024; IEEE Big Data 2023.</p></div><div><p><strong>Leadership</strong><br />Session Chair, IEEE HPCC 2025.</p><p><strong>Recognition</strong><br />SIGMETRICS 2025 Student Travel Grant.</p></div></div>
       </section>
+
+      <VisitorMap />
 
       <footer><div className="section-shell footer-bottom"><span>© 2026 Shiyue Hou</span><a href="#top">Back to top ↑</a></div></footer>
     </main>
