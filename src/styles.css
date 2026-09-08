@@ -119,6 +119,27 @@ h1 { margin: 16px 0 8px; font-size: clamp(52px, 7vw, 80px); line-height: 1; lett
 .service-grid p { margin: 20px 0 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
 .service-grid strong { color: var(--accent); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
 
+
+.visitor-copy { max-width: 850px; }
+.visitor-intro { max-width: 650px; margin: 16px 0 22px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.visitor-map-frame {
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+}
+.visitor-map-frame iframe,
+.visitor-map-frame img,
+.visitor-map-frame canvas {
+  display: block;
+  max-width: 100%;
+}
+.visitor-note { margin: 10px 0 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
+
 footer { padding: 24px 0; background: var(--ink); color: white; }
 .footer-bottom { display: flex; justify-content: space-between; color: #98aaa3; font-size: 11px; }
 
@@ -152,6 +173,7 @@ footer { padding: 24px 0; background: var(--ink); color: white; }
   .experience-title { flex-direction: column; gap: 4px; }
   .period { order: -1; }
   .service-grid { grid-template-columns: 1fr; gap: 10px; }
+  .visitor-map-frame { min-height: 220px; padding: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
